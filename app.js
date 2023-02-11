@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const router = require('./routes.js');
 const log = require ('./middlewares/logger');
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(log);
 app.use(express.urlencoded({extended: true}));
